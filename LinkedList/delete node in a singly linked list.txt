@@ -1,0 +1,47 @@
+
+/* Linklist node structure
+class Node
+{
+	int data;
+	Node next;
+	
+	Node(int d)
+	{
+		data = d;
+		next = null;
+	}
+}*/
+/*You are required to complete below method*/
+class GfG
+
+{
+
+    Node deleteNode(Node head, int x)
+
+    {
+
+ // Your code here 
+
+ if(x==1){
+
+     head=head.next;
+
+ }else{
+
+     Node temp=head;
+
+     for(int i=1;i<x-1;i++){
+
+         temp=temp.next;
+
+     }
+
+     temp.next=temp.next.next;
+
+ }
+
+ return head;
+
+    }
+
+}
