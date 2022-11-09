@@ -1,0 +1,53 @@
+
+/*
+class Node {
+    int data;
+    Node next;
+    
+    public Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}*/
+
+class Solution {
+    
+    //Function to check whether two linked lists are identical or not.
+    public boolean isIdentical (Node head1, Node head2){
+        //write your code here 
+        int a =(findLength(head1));
+        int b =(findLength(head2));
+        
+        if(a!=b)
+        return false;
+        
+        Node cur =head1;
+        Node pre =head2;
+        
+        while(cur!=null && pre!=null){
+            
+                if(cur.data !=pre.data){
+                return false;
+                
+               
+                
+            }
+             cur =cur.next;
+                pre =pre.next;
+        }
+        
+        
+        return true;
+        
+    }
+    
+    int findLength(Node head){
+        Node cur =head;
+        int i=0;
+        while(cur!=null){
+            i++;
+            cur=cur.next;
+        }
+        return i;
+    }
+}
